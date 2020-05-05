@@ -1,7 +1,7 @@
 '''
 @Author: your name
 @Date: 2020-05-03 20:55:04
-@LastEditTime: 2020-05-03 21:19:54
+@LastEditTime: 2020-05-04 14:51:01
 @LastEditors: Please set LastEditors
 @Description: In User Settings Edit
 @FilePath: /leetcode-python/242.valid-anagram.py
@@ -12,7 +12,7 @@
 # [242] Valid Anagram
 #
 
-# @lc code=start
+# @lc code=star
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         dic1, dic2 = {}, {}
@@ -21,5 +21,6 @@ class Solution:
         for item in t:
             dic2[item] = dic2.get(item,0)+1
         return dic1 == dic2
+        
 # @lc code=end
 

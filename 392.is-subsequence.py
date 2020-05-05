@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-05-03 14:00:45
+@LastEditTime: 2020-05-04 00:25:33
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: /tencent/Users/yuki/leetcode-python/392.is-subsequence.py
+'''
 #
 # @lc app=leetcode id=392 lang=python3
 #
@@ -19,14 +27,7 @@ class Solution:
     More about all/any and generator here.
 '''
     def isSubsequence(self, s: str, t: str) -> bool:
-         for i in range (0, len(s)):    
-             try:
-                 index = t.index(s[i])
-             except ValueError: 
-                 return False
-
-             t = t[index+1:]
-
-         return True
+         iter_t = iter(t)
+         return all(c in iter_t for c in s)
 # @lc code=end
 
