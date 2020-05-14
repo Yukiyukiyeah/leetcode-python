@@ -6,7 +6,12 @@
 		{
 			"name": "leetcode-python",
 			"path": "."
+		},
+		{
+			"path": "../Webdesign"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Webdesign"
+	}
 }
