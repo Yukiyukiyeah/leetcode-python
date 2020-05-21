@@ -1,7 +1,7 @@
 '''
 @Author: your name
 @Date: 2020-05-18 16:25:44
-@LastEditTime: 2020-05-18 19:36:43
+@LastEditTime: 2020-05-21 14:46:58
 @LastEditors: Please set LastEditors
 @Description: In User Settings Edit
 @FilePath: /leetcode-python/200.number-of-islands.py
@@ -24,6 +24,7 @@ class UnionFind(object):
                 if grid[i][j] == '1':
                     self.parent[i*n + j] = i*n + j
                     self.count += 1
+                    
     def find(self, i):
         if self.parent[i] != i:
             self.parent[i] = self.find(self.parent[i])
