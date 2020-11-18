@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2020-11-10 07:31:09
+LastEditTime: 2020-11-18 20:31:44
+LastEditors: your name
+Description: In User Settings Edit
+FilePath: /leetcode-python/leetcode-python/141.linked-list-cycle.py
+'''
 #
 # @lc app=leetcode id=141 lang=python3
 #
@@ -11,16 +19,14 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        if not head or not head.next:
-            return False
-        slow = head
-        fast = head.next
-        while fast.next and fast.next.next:
-            slow = slow.next
+        slow, fast = head, head
+        while fast and fast.next is not None:
             fast = fast.next.next
-            if slow == fast:
+            slow = slow.next
+            if(slow == fast):
                 return True
         return False
 # @lc code=end

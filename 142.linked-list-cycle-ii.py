@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2020-11-10 07:31:09
+LastEditTime: 2020-11-18 20:36:31
+LastEditors: your name
+Description: In User Settings Edit
+FilePath: /leetcode-python/leetcode-python/142.linked-list-cycle-ii.py
+'''
 #
 # @lc app=leetcode id=142 lang=python3
 #
@@ -13,21 +21,17 @@
 
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
-        if head is None or head.next is None:
-            return None
-        slow = head
-        fast = head
-        while fast and fast.next:
-            slow = slow.next
+        slow, fast = head, head
+        while fast and fast.next is not None:
             fast = fast.next.next
-            if slow == fast:
-                break
-        if not fast or not fast.next:
-            return None
-        while head != slow:
-            head = head.next
             slow = slow.next
-        return head
+            if slow == fast:
+                slow = head
+                while slow != fast:
+                    slow = slow.next
+                    fast = fast.next
+                return slow
+        return None
 
 # @lc code=end
 
