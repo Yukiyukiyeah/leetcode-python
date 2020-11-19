@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2020-11-10 07:31:09
+LastEditTime: 2020-11-19 21:10:59
+LastEditors: Please set LastEditors
+Description: In User Settings Edi
+FilePath: /leetcode-python/206.reverse-linked-list.py
+'''
 #
 # @lc app=leetcode id=206 lang=python3
 #
@@ -12,10 +20,11 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        cur, prev = head, None
-        # 连续赋值等式右边都是局部变量，而非变量值本身
-        while cur:
-            cur.next, prev, cur = prev, cur, cur.next
-        return prev
+        if head is None or head.next is None:
+            return head
+        last = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return last
 # @lc code=end
 
