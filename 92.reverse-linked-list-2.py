@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2020-11-19 21:49:09
-LastEditTime: 2020-11-19 21:49:09
+LastEditTime: 2020-11-20 15:11:03
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: /leetcode-python/92.reverse-linked-list-2.py
