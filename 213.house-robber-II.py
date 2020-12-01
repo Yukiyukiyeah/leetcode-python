@@ -1,10 +1,12 @@
 '''
 Author: your name
 Date: 2020-12-01 16:39:40
-LastEditTime: 2020-12-01 16:39:40
+LastEditTime: 2020-12-01 16:41:08
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: /leetcode-python/213.house-robber-II.py
+Solution:
+Divide the question into 2 parts: [0, len(nums) - 1), [1, len(nums))
 '''
 class Solution:
     def rob(self, nums: List[int]) -> int:
